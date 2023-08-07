@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label>Music Player</label>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#artists">Artists</a>
+                <a href="#playlists">Playlists</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <input type="file" id="fileInput" accept=".mp3, .wav, .ogg, .flac, .aac, .m4a" multiple>
+                <button onclick="openFileChooser()">Choose Music</button>
+                <div onclick="showMenuBar()"><i class="fa fa-bars"></i></div>
+            </div>
+        </nav>
+
+        <div class="menu-bar">
+            <a href="#home">Home</a>
+            <a href="#artists">Artists</a>
+            <a href="#playlists">Playlists</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <input type="file" id="fileInput" accept=".mp3, .wav, .ogg, .flac, .aac, .m4a" multiple>
+            <button onclick="openFileChooser()">Choose Music</button>
+        </div>
+    </header>
+
+    <section class="main" onclick="hideMenuBar()">
+        <div class="music-player">
+            <div class="thumbnail">
+                <img src="../Music Player/logo.jpg" alt="cover">
+            </div>
+            <div class="title">
+                <label>Song Title</label>
+                <label>Author Name</label>
+            </div>
+            <audio id="myAudio" controls>
+                <source src="" type="audio/mpeg">
+            </audio>
+            <div class="bar">
+                <input type="range" id="progress">
+            </div>
+            <div class="buttons">
+                <button class="side-btns" onclick="previousMusic()"><i class="fa fa-backward"></i></button>
+                <button class="mid-btn" onclick="changePlayButton()"><i class="fa fa-play"></i></button>
+                <button class="side-btns" onclick="nextMusic()"><i class="fa fa-forward"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
